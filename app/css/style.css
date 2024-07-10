@@ -1,0 +1,810 @@
+.body{
+    height: 100vh !important;
+}
+#customerdiv{
+    height: 100vh !important;
+}
+
+.pc {
+    width: 40%;
+    padding-left: 20px;
+    font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+    color: black;
+    font-weight: bolder;
+}
+
+.container {
+    /* display: flex; */
+    width: 100% !important;
+    padding: 50px 15px !important;
+    margin: 0% !important;
+}
+
+.select-wrapper input.select-dropdown {
+    padding: .375rem 2.25rem .375rem .75rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    width: 95% !important;
+}
+
+.container1 {
+    padding: 50px 15px;
+}
+
+.select,
+#filterby {
+    width: 90%;
+    padding: 20px 0px;
+    margin: 0px 0px 0px 40px;
+}
+
+.container label,
+.select label,
+#filterbywb,
+#payment-label,
+.modal-content label,
+#invoice-select label,
+.modal-content label {
+    font-size: larger;
+    font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+    color: black;
+    outline: none !important;
+    padding-bottom: 10px;
+    font-weight: bolder;
+
+}
+
+option {
+    color: black;
+}
+
+.container select,
+.select-dropdown {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.container select:focus,
+.select-dropdown:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.savebtn {
+    width: 100%;
+    /* margin: auto; */
+    text-align: center;
+    border: none;
+
+}
+
+#save {
+    width: 90%;
+    /* margin: auto; */
+    margin: 0px 50px;
+}
+
+#fieldrecordsave {
+    width: 25%;
+}
+
+#fieldrecordsave .savebtn {
+    width: 20%;
+}
+
+.savebtn div,
+.filterbtn,
+.paynow {
+    cursor: pointer;
+    border-left: none;
+    border-right: none;
+    border: 1px solid #9e9e9e;
+    padding: 5px 15px;
+    /* border-radius: 5%; */
+    background-color: #408dfb;
+    color: white;
+}
+
+
+/* nav section */
+
+#nav {
+    display: flex;
+    font-size: 15px;
+    font-size: larger;
+    cursor: pointer;
+    padding-top: 8px;
+    justify-content: space-around;
+    border: 1px solid #fbd6b2;
+    background: #fef4ea;
+}
+
+.fm {
+    padding: 5px 10px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Source Sans Pro';
+    /* font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important; */
+}
+
+#fm {
+    border-radius: 0px;
+    color: black;
+    border-bottom: 2px solid #408dfb;
+}
+
+.fieldmap {
+    display: block;
+    margin: 60px auto;
+    box-shadow: 0px 0px 1px #98b3d8;
+    width: 60%;
+    padding: 0px 0px 4% 0px;
+}
+
+.invoicereport {
+    display: block;
+    margin: 0px 10px 0px 45px;
+    box-shadow: 0px 0px 1px #98b3d8;
+    /* width: 97%; */
+    padding: 0px 0px 2% 0px;
+}
+
+.paymentsec,
+.customer {
+    display: block;
+    margin: 40px 45px;
+    box-shadow: 0px 0px 1px #98b3d8;
+    padding: 0px 0px 2% 0px;
+
+}
+
+.section-notvisible {
+    display: none;
+}
+
+ul .nav {
+    visibility: hidden;
+    width: 100%;
+    padding-left: 25px;
+}
+
+ul:hover .nav {
+    visibility: visible;
+}
+
+#invoice-select select {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px !important;
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+
+}
+
+#content,
+#customerstatementdate {
+    padding: 0px 35px;
+}
+
+#invoice-table {
+    padding: 40px 0px 20px 40px;
+}
+
+#payment-invoices-sec,
+#paymentrecordTable {
+    padding: 20px 0px 20px 40px;
+    width: 97%;
+}
+
+#paybtn-sec {
+    padding: 0px 0px 20px 50px;
+}
+
+.invoicecard {
+    border: 1px solid #98b3d8;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+#invoice-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#invoice-card div {
+    width: 18%;
+    /* border-radius: 10px; */
+    margin-left: 15px;
+    border-right: 2px solid #afbed3;
+}
+
+#invoice-card #debit {
+    border-right: 2px solid #f7f7fe;
+}
+
+#invoice-card h4 {
+    text-align: left;
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+table {
+    width: 100% !important;
+    border: none !important;
+    color: black;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px !important;
+}
+
+th {
+    background-color: #f7f7fe;
+    color: black;
+    border-radius: 0px !important;
+    font-weight: bolder;
+}
+
+h6 {
+    color: black !important;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+
+}
+
+#invoicedetails {
+    margin: 0px 40px;
+}
+
+#customerimg div {
+    padding: 10px;
+}
+
+#customerimg h5 {
+    color: #9e9e9e;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+table:hover {
+    cursor: pointer;
+}
+
+.model {
+    width: 70% !important;
+    height: 50% !important;
+}
+
+#modal-a7cac594-d003-fa22-ec99-19f0f520a474 {
+    width: 70% !important;
+    height: 40% !important;
+}
+
+#dateinput {
+    display: flex;
+    width: 100%;
+    background-color: #f7f7fe;
+    margin: 20px 0px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+#dateinput div {
+    width: 33%;
+    display: flex;
+
+}
+
+#dateinput label {
+    width: 20%;
+    padding-top: 25px;
+    /* padding-right: 20px; */
+    vertical-align: middle;
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+
+}
+
+#dateinput input {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.filterbtn,
+.paynow {
+    /* width: 10%; */
+    margin: 20px 0px;
+    border: none !important;
+
+}
+
+#viewbtn,
+#viewdiv,
+#viewdelbtn,
+.card {
+    display: block;
+}
+
+#notviewbtn,
+#notviewdiv,
+#notviewdelbtn,
+.notcard {
+    display: none;
+}
+
+.loadingbtn {
+    background-color: #20c997 !important;
+}
+
+.load-wrapp {
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.line {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+
+
+.load-3 .line:nth-last-child(1) {
+    animation: loadingC 0.6s 0.1s linear infinite;
+}
+
+.load-3 .line:nth-last-child(2) {
+    animation: loadingC 0.6s 0.2s linear infinite;
+}
+
+.load-3 .line:nth-last-child(3) {
+    animation: loadingC 0.6s 0.3s linear infinite;
+}
+
+
+
+@keyframes loadingC {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#loadingview,
+#loadingview2,
+#loadingview3,
+#loadingview4 {
+    display: none;
+}
+
+#pagination-sec,
+.paymentpagination {
+    padding: 0px 0px 0px 40px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 5px 8px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4b9cdb;
+    text-decoration: none;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+#dateTable {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.datecol {
+    width: 8% !important;
+}
+
+#dateTable th {
+    background-color: #f7f7fe;
+}
+
+.form-select:focus {
+    box-shadow: none !important
+}
+
+#fieldtable {
+    padding: 10px 0px 0px 0px;
+    width: 95%;
+    text-align: center;
+}
+
+i {
+    color: #4b9cdb;
+    padding: 0px 10px;
+}
+
+#del {
+    display: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+
+}
+/* 
+.fa-pencil {
+    font-size: 15px !important;
+    visibility: hidden;
+    padding-bottom: 10px !important;
+} */
+
+.viewicons {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px !important;
+    border-radius: 50%;
+    background-color: #408dfb;
+}
+
+#fieldreportmodal {
+    width: 50%;
+    margin: auto;
+}
+
+#examplemodal {
+    width: 50% !important;
+}
+
+.rowactivity:hover .fa-pencil {
+    visibility: visible;
+}
+
+.fa-chevron-down {
+    color: white !important;
+    margin-left: -5px;
+    margin-top: 5px;
+    font-size: 10px !important;
+}
+
+.field {
+    display: flex;
+    width: 40%;
+    padding: 20px;
+    margin-left: 25px;
+
+}
+
+.fa-trash {
+    margin-top: 8px !important;
+}
+
+#fieldtable button,
+#paybtn-sec button {
+    cursor: pointer;
+    border-left: none;
+    margin-right: 20px;
+    border-right: none;
+    border: 1px solid #9e9e9e;
+    padding: 5px 15px;
+    /* border-radius: 5%; */
+    background-color: #408dfb;
+    color: white;
+    font-size: 15px;
+}
+
+#paybtn-sec .delbtn:hover,
+#fieldtable button:hover {
+    cursor: pointer;
+}
+
+#selectAllCheckbox,
+.selectCheckbox {
+    opacity: 1 !important;
+    margin-top: -5px;
+    pointer-events: all !important;
+    display: block !important;
+    visibility: visible !important;
+    border: 1px solid #408dfb !important;
+}
+
+.check {
+    padding: 10px;
+}
+
+.label {
+    margin-left: -110px !important;
+}
+
+#fieldtable #table {
+    margin-left: 40px;
+}
+
+.warehouse-visible,
+.branch-visible,
+.filter-visible,
+.payment-visible,
+.paybtn-view,
+.paymentbalance-view,
+#paynow-view {
+    display: block;
+}
+
+.warehouse-notvisible,
+.branch-notvisible,
+.paybtn-notview,
+.filternot-visible,
+.payment-notvisible,
+.paymentbalance-notview,
+#paynow-notview {
+    display: none;
+}
+
+.filter {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#filterby {
+    width: 35%;
+}
+
+.filter #invoice-select {
+    width: 49%;
+}
+
+#invoice-select label {
+    margin-top: 15px;
+}
+
+.warehousebranch-select {
+    margin-top: -12px;
+    margin-left: 40px;
+}
+
+#warehouse-sec,
+#branch-sec {
+    width: 100%;
+}
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+    position: relative !important;
+    align-items: center;
+    margin: 15px 0px 0px 15px;
+    opacity: 1 !important;
+    pointer-events: painted !important;
+}
+
+#warebranch {
+    margin-top: 15px;
+    font-size: larger;
+    /* font-family: 'Source Sans Pro'; */
+    font-family: "Inter", "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+
+}
+
+#payment-label {
+    margin: 20px 0px 0px 40px !important;
+}
+
+input[type=number]:not(.browser-default) {
+    padding: .375rem 2.25rem .375rem .75rem !important;
+    padding: 0px !important;
+    color: black !important;
+    margin-left: 40px !important;
+
+}
+
+#payment-input {
+    width: 87% !important;
+}
+
+#payment-input input {
+    height: 3em !important;
+    width: 103% !important;
+    padding-left: 10px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+
+}
+
+.payments {
+    height: 1% !important;
+    width: 60% !important;
+    border-bottom: none !important;
+}
+
+.payments:focus {
+    border-bottom: none !important;
+}
+
+input[type=number]:not(.browser-default):focus:not([readonly]) {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#exampleModal {
+    width: 40% !important;
+}
+
+#exampleModalCenter {
+    width: 80% !important;
+}
+
+.modal {
+    margin-top: 30px !important;
+    --bs-modal-width: 80% !important;
+}
+
+.modal-dialog {
+    width: 100% !important;
+}
+
+.modal-content div {
+    padding: 10px 0px !important;
+}
+
+#payinvoices table {
+    width: 100% !important;
+}
+
+.payments {
+    padding-left: 5px !important;
+}
+
+#amounthold,
+#totalpayment {
+    font-weight: bolder !important;
+    text-align: center !important;
+}
+
+.modal-footer button {
+    margin-left: 10px !important;
+    background-color: #408dfb !important;
+}
+
+#paymentdate {
+    width: 97% !important;
+    border-top: 1px solid #dee2e6 !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    border-left: 1px solid #dee2e6 !important;
+    border-right: 1px solid #dee2e6 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: var(--bs-border-radius) !important;
+}
+
+#paymentbalance {
+    margin: 0px 0px 20px 40px;
+    width: 93%;
+
+}
+
+#chequebalance {
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #f7f7fe;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+tr {
+    border-bottom: none !important;
+}
+
+.colorpaid {
+    color: #22b378 !important;
+}
+
+.coloroverdue {
+    color: red !important;
+}
+
+.colornotpaid {
+    color: #eb6100 !important;
+}
+
+button:focus {
+    background-color: #408dfb !important;
+}
+
+.childcompany {
+    /* position: relative; */
+    border: 2px solid #f7f7fe;
+    margin: 0px 0px 20px 40px;
+    padding: 10px;
+
+}
+
+.childcompany:hover {
+    /* border: 2px solid #408dfb; */
+    box-shadow: 0px 0px 2px #064fb6;
+}
+
+.parentcard {
+    display: flex;
+    background-color: #f2f2ff;
+    padding: 5px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.parentcard p {
+    font-size: 15px;
+    width: 75%;
+    margin: 5px 0px 0px 15px;
+}
+
+.parentcard i {
+    /* width: 10%; */
+    padding-top: 5px;
+    font-size: 20px;
+    color: #408dfb !important;
+}
+.parentcard i:hover{
+    cursor: pointer !important;
+    color: #064fb6 !important;
+}
+
+.childcard {
+
+    text-align: left;
+    padding: 10px 0px 10px 0px;
+    margin: 1% 0px;
+
+}
+
+.childdiv {
+    display: flex;
+    margin-left: 5%;
+    border-left: 2px solid #d6d6fb;
+}
+.childdiv p{
+    margin: 10px 0px -6px 10px;
+}
+
+.branch {
+    height: 20px;
+    width: 50px;
+    height: auto;
+    border-bottom: 2px solid #d6d6fb;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zoho Books Widget</title>
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400..700&family=Dancing+Script&family=Delius&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Special+Elite&family=Zeyada&display=swap"
+		rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+</head>
+
+<body id="body" class="body">
+
+	<section id="nav">
+		<div class="pc">
+			Parent Child Relation
+		</div>
+		<div class="fm" id="fm">
+			<ul class="nav">Field Mapping</ul>
+		</div>
+		<div class="fm">
+			<ul class="nav">Field Report</ul>
+		</div>
+		<div class="fm">
+			<ul class="nav">Invoice Report</ul>
+		</div>
+		<div class="fm">
+			<ul class="nav">Customer Statement</ul>
+		</div>
+		<div class="fm">
+			<ul class="nav">Payment</ul>
+		</div>
+		<div class="fm">
+			<ul class="nav">Payment History</ul>
+		</div>
+	</section>
+	<section class="section-visible sec fieldmap">
+		<section class="container">
+			<div class="select">
+				<label>Select Parent company</label>
+				<select class="form-select" aria-label="Default select example" id="parent-select" required
+					onchange="parentSelectValue('parent-select','child-select')">
+				</select>
+			</div>
+			<div class="select">
+				<label>Select the child company</label>
+				<select id="child-select" multiple>
+					<option value="" disabled>Select Child Company</option>
+				</select>
+			</div>
+		</section>
+		<section id="save">
+			<section class="savebtn">
+				<div onclick="saveTheDetails('parent-select','child-select')">save</div>
+			</section>
+		</section>
+	</section>
+	<section class="section-notvisible sec">
+		<div id="fieldtable"></div>
+		<div id="modalview"></div>
+		<div id="fieldreportmodal">
+		</div>
+	</section>
+
+	<section class="section-notvisible sec">
+		<div class="container1">
+			<div class="invoicereport">
+				<div class="select" id="invoice-select">
+					<label>Select the Customer Name</label>
+					<select class="form-select" aria-label="Default select example" id="invoice-sec" required
+						onchange="parentSelectValue('invoice-sec')">
+					</select>
+				</div>
+				<div id="content"></div>
+			</div>
+			<div class="load-wrapp" id="loadingview">
+				<div class="load-3">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+
+			<div id="invoice-table">
+			</div>
+			<div id="pagination-sec">
+				<div class="pagination" id="pagination"></div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section class="section-notvisible sec" id="customerdiv">
+		<div>
+			<div class="customer">
+				<div class="select" id="invoice-select">
+					<label>Select the Customer</label>
+					<select class="form-select" aria-label="Default select example" id="totalinvoice-sec" required
+						onchange="parentSelectValue('totalinvoice-sec')">
+					</select>
+				</div>
+				<div class="filter">
+					<div class="filternot-visible" id="filterby">
+						<lable for="customfilter" id="filterbywb">Filter By :</lable>
+						<div id="warebranch">
+						</div>
+					</div>
+					<div class="select warehouse-notvisible warehousebranch-select" id="invoice-select">
+						<label>Select the Warehouse</label>
+						<select id="warehouse-sec" multiple onchange="wareHouseBranchSelectValue()">
+							<option value="" disabled>Select Warehouse</option>
+						</select>
+					</div>
+
+					<div class="select branch-notvisible warehousebranch-select" id="invoice-select">
+						<label>Select the Branch</label>
+						<select id="branch-sec" multiple onchange="wareHouseBranchSelectValue()">
+							<option value="" disabled>Select Branch</option>
+						</select>
+					</div>
+				</div>
+				<div id="customerstatementdate">
+				</div>
+			</div>
+
+			<div id="invoicedetails">
+				<div id="customerimg"></div>
+				<div id="invoice-card"></div>
+
+				<div class="load-wrapp" id="loadingview2">
+					<div class="load-3">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div id="dateTable">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-notvisible sec">
+		<div class="customer paymentsec">
+			<div class="select" id="invoice-select">
+				<label>Select the Customer</label>
+				<select class="form-select" aria-label="Default select example" id="payment-sec" required
+					onchange="parentSelectValue('payment-sec')">
+				</select>
+			</div>
+			<div class="payment-notvisible" id="payment">
+				<lable id="payment-label">Enter the Total Payment Amount:</lable>
+				<div id="payment-input">
+				</div>
+			</div>
+		</div>
+
+		<div class="load-wrapp" id="loadingview3">
+			<div class="load-3">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div>
+						<h5 id="totalpayment"></h5>
+					</div>
+
+					<div id="payinvoices">
+
+					</div>
+					<div>
+						<label>Choose Your Bank Account</label>
+						<select class="form-select" aria-label="Default select example" id="bankaccount"
+							required></select>
+					</div>
+
+					<div>
+						<label>Choose Payment Type</label>
+						<select class="form-select" aria-label="Default select example" id="payment-mode"
+							required></select>
+					</div>
+					<div>
+						<label>Payment Date</label>
+						<input type="date" id="paymentdate" onchange="checkDateFromInput()">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary paynow" onclick="payBalanceAmount()">Pay
+							Now</button>
+						<button type="button" id="paynow-notview" class="btn btn-primary loadingbtn paynow"
+							disabled><span class="spinner-border spinner-border-sm" role="status"
+								aria-hidden="true"></span> Wait....</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="payment-invoices-sec">
+
+		</div>
+		<div id="paybtn-sec" class="paybtn-notview">
+			<button onclick="makePayment()" data-toggle="modal" data-target="#exampleModalCenter">Make
+				Payment</button>
+		</div>
+	</section>
+	<section class="section-notvisible sec">
+		<div class="customer paymentsec">
+			<div class="select" id="invoice-select">
+				<label>Select the Customer</label>
+				<select class="form-select" aria-label="Default select example" id="paymentrecord" required
+					onchange="parentSelectValue('paymentrecord')">
+				</select>
+			</div>
+
+		</div>
+		<div>
+			<div class="load-wrapp" id="loadingview4">
+				<div class="load-3">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+			<div id="paymentrecordTable">
+			</div>
+			<div class="paymentpagination">
+				<div class="pagination" id="paginationpayment"></div>
+			</div>
+		</div>
+
+	</section>
+
+	<script src="https://js.zohostatic.com/zohofinance/v1/zf_sdk.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script> -->
+
+	<script src="./js/extension.js" charset="utf-8"></script>
+
+	<script src="./js/api/customapi.js"></script>
+	<script src="./js/api/contactapi.js"></script>
+	<script src="./js/api/invoiceapi.js"></script>
+	<script src="./js/api/warehousebranchapi.js"></script>
+	<script src="./js/api/apiget.js"></script>
+	<script src="./js/api/bankdetailapi.js"></script>
+	<script src="./js/api/customerpaymentapi.js"></script>
+	<script src="./js/api/paymentrecordapi.js"></script>
+
+	<script src="./js/nav/tabnav.js"></script>
+
+	<script src="./js/filedmapping/filedsave.js"></script>
+	<script src="./js/filedmapping/parentchildoption.js"></script>
+	<script src="./js/filedmapping/parentchildselect.js"></script>
+
+	<script src="./js/fieldreport/fieldreport.js"></script>
+	<script src="./js/fieldreport/fieldeditcreate.js"></script>
+
+	<script src="./js/invoicereport/invoicereport.js"></script>
+
+	<script src="./js/filter/datefilter.js"></script>
+
+	<script src="./js/dateform/dateform.js"></script>
+
+	<script src="./js/customerstatement/customerstatement.js"></script>
+	<script src="./js/customerstatement/filterbywarehousebranch.js"></script>
+
+	<script src="./js/payment/paymentInvoices.js"></script>
+	<script src="./js/payment/payamount.js"></script>
+	<script src="./js/payment/paynow.js"></script>
+
+	<script src="./js/paymentrecord/paymentrecord.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+
+</html>

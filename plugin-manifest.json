@@ -1,0 +1,43 @@
+{
+  "locale": [
+    "en"
+  ],
+  "service": "FINANCE",
+  "whiteListedDomains": [],
+  "modules": {
+    "widgets": [
+      {
+        "location": "webtab",
+        "name": "parent-child relation",
+        "url": "/app/widget.html",
+        "logo": "/app/img/logo.png"
+      }
+    ]
+  },
+  "config": [
+  ],
+  "usedConnections": [
+    {
+      "connectionLinkName": "zohobookscontact",
+      "connectionName": "zohobookscontact",
+      "serviceName": "zoho_books",
+      "userAccess": true,
+      "isUserDefinedService": false,
+      "sharedBy": 850322621,
+      "scope": [
+        "ZohoBooks.banking.READ",
+        "ZohoBooks.contacts.READ",
+        "ZohoBooks.creditnotes.READ",
+        "ZohoBooks.customerpayments.All",
+        "ZohoBooks.custommodules.ALL",
+        "ZohoBooks.custommodules.All",
+        "ZohoBooks.debitnotes.READ",
+        "ZohoBooks.invoices.All",
+        "ZohoBooks.invoices.READ",
+        "ZohoBooks.salesorders.All",
+        "ZohoBooks.settings.READ",
+        "ZohoBooks.warehouses.READ"
+      ]
+    }
+  ]
+}
